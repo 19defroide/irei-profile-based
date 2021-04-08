@@ -2,9 +2,8 @@
 
 This project is about a profile-based document filtering. The goal is to manage a incoming flow of documents, and to assignment each document to the users with a corresponding profile. It can be very useful for news website or mobile application. Indeed, if the users choose the main fields they are interested in, the website (or the app) can process automatically the latest articles to recommend them to the users that would be interested in.
 
-For this work, we will have 5 users (Thomas, Aline, Georges, Eva and Lorenzo) with different interests from this list: Cars, Sports, Science, Religion, Polit
+For this work, we will have 5 users (Thomas, Aline, Georges, Eva and Lorenzo) with different interests from this list: Cars, Sports, Science, Religion, Politics.
 
-\pagebreakics.
 
 # The method used
 
@@ -27,19 +26,16 @@ To test it and use it, we can use articles from the BBC News Website for instanc
 
 We want our text to be the input of a classifier. We need to preprocess it, we can't just give a string to our classifier. We have transform our text into another type of representation.
 
-We will transform our text into a vector, with the **TF-IDF calculation**. TF-IDF stands for **Term Frequency - Inverse Document Frequency**. This is a measure of the originality of a words using the number of time a words appears in a document (Term Frequency) and the number of different documents in whiwh the word appears in (Document Frequency). 
-
-$$ tfidf( t, d, D ) = tf( t, d ) \times idf( t, D ) $$
+We will transform our text into a vector, with the **TF-IDF calculation**. TF-IDF stands for **Term Frequency - Inverse Document Frequency**. This is a measure of the originality of a words using the number of time a words appears in a document (Term Frequency) and the number of different documents in whiwh the word appears in (Document Frequency).  
+![equation](http://www.sciweavers.org/tex2img.php?eq=%20tfidf%28%20t%2C%20d%2C%20D%20%29%20%3D%20tf%28%20t%2C%20d%20%29%20%5Ctimes%20idf%28%20t%2C%20D%20%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 #### The Term Frequency
 is easy to understand. It calculates the frequence at which the word t appears in the document d. Usually we have:  
-$$ tf( t, d ) = \log ( 1 + \frac{\text{total documents in corpus}}{\text{documents with term}}) $$
+![img](http://www.sciweavers.org/tex2img.php?eq=tf%28%20t%2C%20d%20%29%20%3D%20%5Clog%20%28%201%20%2B%20%5Cfrac%7B%5Ctext%7Btotal%20documents%20in%20corpus%7D%7D%7B%5Ctext%7Bdocuments%20with%20term%7D%7D%29&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
 
 #### The Inverse document Frequency
-is a way to calculate how xommon or rare a word is in the entire corpus. It is the *inverse* document frequency so the closer it is to 0, the most common a word is (and vice versa). This is how we calculated it:
-$$ idf( t, D ) = log \frac{ \text{| } D \text{ |} }{ 1 + \text{|} \{ d \in D : t \in d \} \text{|} } $$
-
-$\text{|} \{ d \in D : t \in d \} \text{|} $ is the number of documents in which the term t is.
+is a way to calculate how xommon or rare a word is in the entire corpus. It is the *inverse* document frequency so the closer it is to 0, the most common a word is (and vice versa). This is how we calculated it:  
+![img](http://www.sciweavers.org/tex2img.php?eq=idf%28%20t%2C%20D%20%29%20%3D%20log%20%5Cfrac%7B%20%5Ctext%7B%7C%20%7D%20D%20%5Ctext%7B%20%7C%7D%20%7D%7B%201%20%2B%20%5Ctext%7B%7C%7D%20%5C%7B%20d%20%5Cin%20D%20%3A%20t%20%5Cin%20d%20%5C%7D%20%5Ctext%7B%7C%7D%20%7D&bc=White&fc=Black&im=png&fs=12&ff=mathdesign&edit=0)
 
 
 
@@ -63,7 +59,7 @@ Then, we will predict the article input by the user of our programm.
 
 Let's see what is my implementation for this project. 
 
-\pagebreak
+
 
 # The implementation
 
@@ -227,8 +223,6 @@ print("Accuracy: ", accuracy)
 
 We have a pretty good accuracy, so we will use this SVM for the final programm of this project. We have to remember that we want that the user paste a text or an article of his choice, and that our programm deliver this text to one of the user we defined.
 
-\pagebreak
-
 # The main programm
 
 #### Definition of the profiles  
@@ -282,7 +276,6 @@ def main():
 
 You can try by pasting articles from the BBC website. Choose article from these categories: science, cars, politics, sports, religion.
 
-\pagebreak
 
 # Conclusion
 
