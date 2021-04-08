@@ -27,11 +27,10 @@ To test it and use it, we can use articles from the BBC News Website for instanc
 We want our text to be the input of a classifier. We need to preprocess it, we can't just give a string to our classifier. We have transform our text into another type of representation.
 
 We will transform our text into a vector, with the **TF-IDF calculation**. TF-IDF stands for **Term Frequency - Inverse Document Frequency**. This is a measure of the originality of a words using the number of time a words appears in a document (Term Frequency) and the number of different documents in whiwh the word appears in (Document Frequency).  
-![equation](http://www.sciweavers.org/tex2img.php?eq=%20tfidf%28%20t%2C%20d%2C%20D%20%29%20%3D%20tf%28%20t%2C%20d%20%29%20%5Ctimes%20idf%28%20t%2C%20D%20%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 #### The Term Frequency
 is easy to understand. It calculates the frequence at which the word t appears in the document d. Usually we have:  
-![img](http://www.sciweavers.org/tex2img.php?eq=tf%28%20t%2C%20d%20%29%20%3D%20%5Clog%20%28%201%20%2B%20%5Cfrac%7B%5Ctext%7Btotal%20documents%20in%20corpus%7D%7D%7B%5Ctext%7Bdocuments%20with%20term%7D%7D%29&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
+
 
 #### The Inverse document Frequency
 is a way to calculate how xommon or rare a word is in the entire corpus. It is the *inverse* document frequency so the closer it is to 0, the most common a word is (and vice versa). This is how we calculated it:  
