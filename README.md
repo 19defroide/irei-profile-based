@@ -29,13 +29,11 @@ We want our text to be the input of a classifier. We need to preprocess it, we c
 We will transform our text into a vector, with the **TF-IDF calculation**. TF-IDF stands for **Term Frequency - Inverse Document Frequency**. This is a measure of the originality of a words using the number of time a words appears in a document (Term Frequency) and the number of different documents in whiwh the word appears in (Document Frequency).  
 
 #### The Term Frequency
-is easy to understand. It calculates the frequence at which the word t appears in the document d. Usually we have:  
+It is easy to understand. It calculates the frequence at which the word t appears in the document d. Usually we have:  
 
 
 #### The Inverse document Frequency
-is a way to calculate how xommon or rare a word is in the entire corpus. It is the *inverse* document frequency so the closer it is to 0, the most common a word is (and vice versa). This is how we calculated it:  
-![img](http://www.sciweavers.org/tex2img.php?eq=idf%28%20t%2C%20D%20%29%20%3D%20log%20%5Cfrac%7B%20%5Ctext%7B%7C%20%7D%20D%20%5Ctext%7B%20%7C%7D%20%7D%7B%201%20%2B%20%5Ctext%7B%7C%7D%20%5C%7B%20d%20%5Cin%20D%20%3A%20t%20%5Cin%20d%20%5C%7D%20%5Ctext%7B%7C%7D%20%7D&bc=White&fc=Black&im=png&fs=12&ff=mathdesign&edit=0)
-
+It is a way to calculate how xommon or rare a word is in the entire corpus. It is the *inverse* document frequency so the closer it is to 0, the most common a word is (and vice versa).
 
 
 So, the **TF-IDF** is an accurate way to calculate how important a word is in a document, and how reliable is it to predict the theme of the document. The closer is it to 1, the more important the word is.
