@@ -42,7 +42,7 @@ Before doing this, we need to have homogenous data. Their is an important step b
 
 #### Preparation of the text  
 * **Tokenization:** The text has to be split into sentences and the sentences into words. The words must be lowercased, and the punctuation removed.  
-* **Stemming:** The words are reduced to their root form (e.g.: eating $\rightarrow$ eat).  
+* **Stemming:** The words are reduced to their root form (e.g.: eating -> eat).  
 * **Lemmatization:** The words in third person are changed to first person, verbs in past or future tenses are changed into present.  
 The **stopwords** are removed. It's the list of the most commonly used words (e.g.: 'the', 'and', 'a').  
 We removed the words **shorter than 3 characters**.  
