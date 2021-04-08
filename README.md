@@ -1,6 +1,6 @@
 # Introduction
 
-This project is about a profile-based document filtering. The goal is to manage a incoming flow of documents, and to assignment each document to the users with a corresponding profile. It can be very useful for news website or mobile application. Indeed, if the users choose the main fields they are interested in, the website (or the app) can process automatically the latest articles to recommend them to the users that would be interested in.
+This project is about a profile-based document filtering. The goal is to manage a incoming flow of documents, and to assign each document to the users with a corresponding profile. It can be very useful for news website or mobile application. Indeed, if the users choose the main fields they are interested in, the website (or the app) can process automatically the latest articles to recommend them to the users that would be interested in.
 
 For this work, we will have 5 users (Thomas, Aline, Georges, Eva and Lorenzo) with different interests from this list: Cars, Sports, Science, Religion, Politics.
 
